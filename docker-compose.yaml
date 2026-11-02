@@ -45,8 +45,8 @@ services:
 
   airflow-init:
     <<: *airflow-common
-    entrypoint: /bin/bash
     command:
+      - bash
       - -c
       - |
         airflow db migrate
